@@ -202,7 +202,7 @@ function activateLightMode(){
 }</code></pre>
 <h2 id="RandomizedQueue-java"><a href="#RandomizedQueue-java" class="headerlink" title="RandomizedQueue.java"></a>RandomizedQueue.java</h2><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>随机队列的特殊性在于每次移除的元素是随机选取的。算法性能要求中明确该队列迭代器的<strong><em>next()</em></strong>方法必须为<em>O(1)</em>的时间复杂度，链表不容易满足该需求，需要用长度可动态调整的数组(Resized Array)来实现。</p>
 <h3 id="难点-1"><a href="#难点-1" class="headerlink" title="难点"></a>难点</h3><ul>
-<li><strong><em>Dequeue()</em></strong>方法中元素出队时，首先生成一个<em>０～N-1</em>之间的随机数<strong><em>randomIndex</em></strong>,然后将位置为<strong><em>randomIndex</em></strong>的元素与末端节点存储的元素调换，并将末端节点的元素置为<strong><em>null</em></strong>，<em>N</em>向前变化，继续在<em>0～N-1</em>的位置生成随机数，以此类推。这样能保证出队的元素是随机选取的同时，元素个数从队列末端开始减少，从而避免wrap-around的问题（即不会出现数组前几项被dequeue后值为null）。</li>
+<li><strong><em>dequeue()</em></strong>方法中元素出队时，首先生成一个<em>０～N-1</em>之间的随机数<strong>randomIndex</strong>,然后将位置为<strong>randomIndex</strong>的元素与末端节点存储的元素调换，并将末端节点的元素置为<strong><em>null</em></strong>，<em>N</em>向前变化，继续在<em>0～N-1</em>的位置生成随机数，以此类推。这样能保证出队的元素是随机选取的同时，元素个数从队列末端开始减少，从而避免wrap-around的问题（即不会出现数组前几项被dequeue后值为null）。</li>
 <li>及时调整数组长度（缩放）以节省空间。</li>
 </ul>
 <h3 id="代码实现-1"><a href="#代码实现-1" class="headerlink" title="代码实现"></a>代码实现</h3><pre><code class="java"><span class="keyword">import</span> edu.princeton.cs.algs4.StdRandom;
