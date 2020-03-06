@@ -81,8 +81,8 @@ function activateLightMode(){
 <p>接下来加入指针 <strong><em>i</em></strong> 和 <strong><em>j</em></strong> ，分别对应挡板<strong>1</strong>之后的元素和挡板<strong>2</strong>之前的元素。指针 <strong><em>i</em></strong> 从前往后遍历，指针 <strong><em>j</em></strong> 从后往前遍历。<br><a href="https://res.cloudinary.com/dvrxfispp/image/upload/v1583482561/Blog/coursera-algorithm-quicksort/2_gejd4w.png" target="_blank" rel="noopener" data-fancybox="group" data-caption class="fancybox"><img alt title data-src="https://res.cloudinary.com/dvrxfispp/image/upload/v1583482561/Blog/coursera-algorithm-quicksort/2_gejd4w.png" class="lazyload"></a></p>
 <p>简单而言，整个分区的(<strong><em>Partition</em></strong>)过程可以归纳为以下三条简单的规则：</p>
 <ol>
-<li>判断指针 <strong><em>i</em></strong> 指向的元素是否比<strong><em>pivot</em></strong>小，若是，指针继续向右移动( <strong><em>i</em></strong> ++ )；</li>
-<li>判断指针 <strong><em>j</em></strong> 指向的元素是否比<strong><em>pivot</em></strong>大，若是，指针继续向左移动( <strong><em>j</em></strong> – )；</li>
+<li>判断指针 <strong><em>i</em></strong> 指向的元素是否比<strong><em>pivot</em></strong>小，若是，指针继续向右移动；</li>
+<li>判断指针 <strong><em>j</em></strong> 指向的元素是否比<strong><em>pivot</em></strong>大，若是，指针继续向左移动；</li>
 <li>若 <strong>1.</strong> 或 <strong>2.</strong> 为否，即 <strong><em>i</em></strong> 和 <strong><em>j</em></strong> 其中一个指向的元素不符合范围，则对应的指针停在原地。</li>
 </ol>
 <p>直到两个指针指向的元素都不符合范围，就进行交换。交换后元素符合范围规定，则 <strong><em>i</em></strong> 和 <strong><em>j</em></strong> 继续向中间移动。简而言之，<strong>分区操作就是寻找不符合分区范围目标的元素对并进行交换</strong>。</p>
