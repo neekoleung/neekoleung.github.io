@@ -1,3 +1,4 @@
+http://neekoleung.com/articles/metaq-part1/
 http://neekoleung.com/articles/algorithm-quicksort/
 http://neekoleung.com/articles/coursera-algorithm1-4/
 http://neekoleung.com/articles/coursera-algorithm1-3/
